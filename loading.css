@@ -1,3 +1,14 @@
-canvas{
-background-image: url('img/giphy.gif');
+body
+{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: repeat-x ;
+    background-image: url("img/source.gif");
+    font-family: Verdana, sans-serif;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }

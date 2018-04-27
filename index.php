@@ -39,7 +39,7 @@
 		    	  <input class="form-control" type="password" name="password" placeholder="password"/>
 		  	</div>
 		  		<button class="btn btn-primary">Sign in</button>
-          <div><a href="#">Créer un compte</a></div>
+          <div><a href="signup.php">Créer un compte</a></div>
 		</form>
 	</div>
 
