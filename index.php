@@ -18,7 +18,7 @@
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
-  <link rel="icon" href="imgs/favicon.png" />
+  <link rel="icon" href="img/game.png" />
 
 </head>
 <body>
@@ -39,6 +39,7 @@
 		    	  <input class="form-control" type="password" name="password" placeholder="password"/>
 		  	</div>
 		  		<button class="btn btn-primary">Sign in</button>
+          <div><a href="#">Créer un compte</a></div>
 		</form>
 	</div>
 
