@@ -2,10 +2,11 @@
     <html>
         <head>
             <meta charset="utf-8"/>
-            <meta http-equiv="refresh" content="7 ; url=game/index.php">
+            <meta http-equiv="refresh" content="5 ; url=game/index.php">
             <title>Boucle d'animation</title>
+            <link rel="stylesheet" type="text/css" href="loading.css">
         </head>
-        <body style="margin: 0px; overflow: hidden" background:url("img/loading.png")>
+        <body style="margin: 0px; overflow: hidden">
 
             <canvas id="canvas"></canvas>
 
@@ -19,6 +20,9 @@
         step = 0,
         vx = r * 0.2;
     var sprites = new Image();
+    //
+
+    //
     sprites.onload = animate;
     sprites.src = "img/shell.png";
     var canvas = document.getElementById("canvas"),
@@ -30,7 +34,8 @@
     context.scale(ratio, ratio);
     context.imageSmoothingEnabled = false;
     context.fillStyle = "rgba(255, 255, 255, 0.25)";
-    function animate() {
+    function animate()
+    {
         draw();
         update();
         requestAnimationFrame(animate);
@@ -59,6 +64,5 @@
             step -= 12;
     }
             </script>
-
         </body>
     </html>

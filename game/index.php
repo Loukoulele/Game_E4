@@ -18,6 +18,7 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
   <link rel="icon" href="../img/game.png" />
+  <embed src="../img/song1.mp3" autostart="true" loop="false" hidden="true"></embed>
 
 </head>
 <body>
