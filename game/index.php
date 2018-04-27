@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
   <link rel="stylesheet" type="text/css" href="style.css">
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -18,11 +19,12 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
   <link rel="icon" href="../img/game.png" />
-<audio src="song/song1.mp3" controls></audio>
+  <audio src="song/song1.mp3" controls></audio>
 
 </head>
 <body>
 <?php
 include 'header/header.php';
+include 'side_menu/side_menu.php';
  ?>
 </body>
