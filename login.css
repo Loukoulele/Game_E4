@@ -51,11 +51,15 @@ body{
 .fa{
 	color: white;
 }
-img{
-	margin-top: 3em;
-  margin-left: 20em;
-	height: 50%;
-  width: 50%;
+.size{
+  margin-top: 3em;
+  margin-left: 11em;
+  width: 50em;
+}
+.sizelogo{
+  margin-top: 3em;
+  margin-left: 24em;
+  width: 30%;
 }
 .alert{
 	background: transparent;
