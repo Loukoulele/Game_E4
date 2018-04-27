@@ -27,8 +27,8 @@
 ?>
 
 	<div class="container">
-		<img src="img/title.png">
-    <img src="img/game.png">
+		<img src="img/title.png" class="size">
+    <img src="img/game.png" class="sizelogo">
 		<form class="form-group" action="index.php" method="POST">
 			<div class="input-group">
 				<div class="input-group-text"><i class="fa fa-user fa-lg" aria-hiden="true"></i></div>
