@@ -1,68 +1,31 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <meta charset="utf-8"/>
-            <meta http-equiv="refresh" content="5 ; url=game/index.php">
-            <title>Boucle d'animation</title>
-            <link rel="stylesheet" type="text/css" href="loading.css">
-        </head>
-        <body style="margin: 0px; overflow: hidden">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="5; url=game/index.php">
+    <link rel="stylesheet" type="text/css" href="create_carac.css">
+    <title>World of Quest</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <canvas id="canvas"></canvas>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="loading.css">
 
-            <script>
-    // Initialisation des variables globales
-    var width = window.innerWidth,
-        height = window.innerHeight,
-        ratio = window.devicePixelRatio;
-    var x = width / 2,
-        r = 40,
-        step = 0,
-        vx = r * 0.2;
-    var sprites = new Image();
-    //
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
-    //
-    sprites.onload = animate;
-    sprites.src = "img/shell.png";
-    var canvas = document.getElementById("canvas"),
-        context = canvas.getContext("2d");
-    canvas.width  = width  * ratio;
-    canvas.height = height * ratio;
-    canvas.style.width  = width  + "px";
-    canvas.style.height = height + "px";
-    context.scale(ratio, ratio);
-    context.imageSmoothingEnabled = false;
-    context.fillStyle = "rgba(255, 255, 255, 0.25)";
-    function animate()
-    {
-        draw();
-        update();
-        requestAnimationFrame(animate);
-    }
-    function draw() {
-        context.fillRect(0, 0, width, height);
+    <link rel="icon" href="img/game.png" />
+  </head>
+  <body>
+    <div id="loading">
+      <img src="img/loading_animation.gif" class="rounded mx-auto d-block">
+    </div>
 
-        // Affichage
-        drawShell(x, height, r, Math.floor(step));
-    }
-    function drawShell(x, y, r, step) {
-        var s = r/12;
-
-        context.drawImage(sprites, 32*step, 0, 32, 32, x - 16*s, y - 26*s, 32*s, 32*s);
-    }
-    function update() {
-        // Mise à jour des variables
-        x += vx;
-
-        if (x < r || x > width - r) {
-            vx *= -1;
-        }
-
-        step += 0.3;
-        if (step >= 12)
-            step -= 12;
-    }
-            </script>
-        </body>
-    </html>
+  </body>
+</html>
