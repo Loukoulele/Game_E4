@@ -63,7 +63,7 @@
       if ($user)
       {
                 $_SESSION['admin'] = $_POST['username'];
-                header('location: game/index.php');
+                header('location: loading.php');
       }
       else
       {
