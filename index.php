@@ -46,6 +46,8 @@
     require_once 'Database.php';
   ?>
   <?php
+
+
   if (isset($_POST) AND !empty($_POST))
   {
     if (!empty(htmlspecialchars($_POST['username'])) AND !empty(htmlspecialchars($_POST['password'])))
@@ -54,11 +56,9 @@
       $req->execute([
         'username' => $_POST['username'],
         'password' => $_POST['password']
-
       ]);
 
       $user = $req->fetchObject(); // exe ma req
-
 
       if ($user)
       {
