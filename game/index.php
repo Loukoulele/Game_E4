@@ -27,4 +27,5 @@
 include 'header/header.php';
 include 'side_menu/side_menu.php';
  ?>
+ <img src="../img/zelda.gif" class="rounded mx-auto d-block">
 </body>

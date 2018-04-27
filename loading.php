@@ -24,8 +24,11 @@
   </head>
   <body>
     <div id="loading">
-      <img src="img/loading_animation.gif" class="rounded mx-auto d-block">
+      <img src="img/loading_animation1.gif" class="rounded mx-auto d-block">
+      <div class="text-center">
+        <h1>LOADING</h1>
+          </div>
+          <div>
     </div>
-
   </body>
 </html>
