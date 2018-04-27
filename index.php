@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Mightymmo</title>
+  <title>World of Quest</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,12 +24,12 @@
 <body>
 <?php
     session_start()
-    ?>
+?>
 
 	<div class="container">
 		<img src="img/title.png">
     <img src="img/game.png">
-		<form class="form-group" action="login.php" method="POST">
+		<form class="form-group" action="index.php" method="POST">
 			<div class="input-group">
 				<div class="input-group-text"><i class="fa fa-user fa-lg" aria-hiden="true"></i></div>
 				<input class="form-control" type="username" name="username" placeholder="username"/>
@@ -43,7 +43,7 @@
 	</div>
 
     <?php
-    require_once '../Database.php';
+    require_once 'Database.php';
   ?>
   <?php
   if (isset($_POST) AND !empty($_POST))
@@ -63,7 +63,7 @@
       if ($user)
       {
                 $_SESSION['admin'] = $_POST['username'];
-                header('location:in_appart.php');
+                header('location: game/index.php');
       }
       else
       {
