@@ -2,6 +2,10 @@ body{
   background-color: #2d2d30;
 }
 
+h2{
+  color: whitesmoke !important;
+  margin-left: 3em;
+}
 .form-group{
     padding-top: 5%;
     padding-left: 30%;
