@@ -1,6 +1,3 @@
-<?php
-session_start();
- ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,11 +26,6 @@ session_start();
 <?php
 include 'header/header.php';
 include 'side_menu/side_menu.php';
-include 'calldb.php';
  ?>
-      <img src="<?php echo'../img/' . $joueur['image']; ?>" class="rounded mx-auto d-block" alt="...">
-       <p><?php echo ' ' . $joueur['pseudo']; ?></p>
-       <p><?php echo ' ' . $joueur['classe']; ?></p>
-       <p><?php echo ' ' . $joueur['niveau']; ?></p>
-       <p><?php echo ' ' . $joueur['experience']; ?></p>
+ <img src="../img/zelda.gif" class="rounded mx-auto d-block">
 </body>
