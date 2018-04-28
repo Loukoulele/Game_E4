@@ -7,16 +7,16 @@
               <strong>Pseudo<strong>
             </li>
             <li>
-                <a href="#">Dashboard</a>
+                <a href="index.php">Aventure</a>
             </li>
             <li>
-                <a href="#">Shortcuts</a>
+                <a href="quete.php">Quête</a>
             </li>
-            <li>
+            <!--<li>
                 <a href="#">Overview</a>
-            </li>
+            </li>-->
             <li>
-                <a href="#">Events</a>
+                <a href="#">Options</a>
             </li>
             <li>
         </ul>
