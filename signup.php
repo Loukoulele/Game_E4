@@ -1,4 +1,8 @@
-
+<?php
+    session_start();
+    require_once 'Database.php';
+    require_once 'my_functions/signup_func.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,23 +26,14 @@
 
 </head>
 <body>
-<?php
-    session_start()
-?>
-
 	<div class="container">
 		<img src="img/title.png" class="size">
     <img src="img/game.png" class="sizelogo">
 		<form class="form-group" action="signup.php" method="POST">
       <h2>Créer son compte</h2>
-      <input type="checkbox" name="image[]" value="gon" />gon<br>
-       <input type="checkbox" name="image[]" value="hisoka" />hisoka<br>
-       <input type="checkbox" name="image[]" value="netero" />netero<br>
-
-			<div class="input-group">
-				<div class="input-group-text"><i class="fa fa-user fa-lg" aria-hiden="true"></i></div>
-				<input class="form-control" type="username" name="username" placeholder="username"/>
-		  	</div>
+      <input type="radio" name="image" value="gon.png" checked/>Gon<br>
+       <input type="radio" name="image" value="hisoka.png" />Hisoka<br>
+       <input type="radio" name="image" value="netero.png" />Netero<br>
         <div class="input-group">
           <div class="input-group-text"><i class="fa fa-user-circle fa-lg" aria-hiden="true"></i></div>
           <input class="form-control" type="pseudo" name="pseudo" placeholder="pseudo"/>
@@ -54,39 +49,5 @@
 		  		<button class="btn btn-primary" type="submit" name="forminscription">Créer</button>
 		</form>
 	</div>
-
-    <?php
-    require_once 'Database.php';
-  ?>
-  <?php
-
-
-  if (isset($_POST['forminscription']))
-  {
-    $username = htmlspecialchars($_POST['username']);
-    $pseudo = htmlspecialchars($_POST['pseudo']);
-    $password = sha1($_POST['password']);
-    $password1 = sha1($_POST['password1']);
-
-    if (!empty(($_POST['username'])) AND !empty(($_POST['pseudo'])) AND !empty(($_POST['password'] AND !empty(($_POST['password1'] AND !empty(($_POST['password1'])))))
-    {
-      if($password == $password1){
-        $insertuser = $db->prepare("INSERT INTO users (username, password) values(?, ?)");
-        $insertuser->execute(array($username, $password));
-        $insertpseudo = $db->prepare("INSERT INTO joueurs (pseudo, image) values(?, ?)");
-        $insertpseudo->execute(array($pseudo, $image));
-      }
-      else{
-        $error ="Les mots de passes ne correspondent pas !";
-      }
-    }
-    else{
-        $error = 'Veuillez remplir tous les champs !';
-    }
-  }
-  if (isset($error))
-  {
-    echo '<div class="alert">'.$error.'</div>';
-  } ?>
- ?>
 </body>
+</html>
