@@ -9,17 +9,25 @@ if (isset($_POST['forminscription']))
 
   if (!empty($_POST['pseudo']) AND !empty($_POST['password']) AND !empty(($_POST['password1'])))
   {
-    if($password == $password1)
+    $check_pseudo = $db->prepare("SELECT pseudo FROM joueurs WHERE pseudo = ?");
+    $check_pseudo->execute(array($pseudo));
+    if ($check_pseudo->rowCount() == 0)
     {
-      $insertuser = $db->prepare("INSERT INTO joueurs (pseudo, password, image) values(?, ?, ?)");
-      $insertuser->execute(array($pseudo, $password, $image));
-      header('Location: ../index.php');
+      if($password == $password1)
+      {
+        $insertuser = $db->prepare("INSERT INTO joueurs (pseudo, password, image) values(?, ?, ?)");
+        $insertuser->execute(array($pseudo, $password, $image));
+        header('Location: index.php');
+      }
+      else
+      {
+        $error ="Les mots de passes ne correspondent pas !";
+      }
     }
-    else
-    {
-      $error ="Les mots de passes ne correspondent pas !";
+    else {
+      $error ="Pseudo deja existant";
     }
-  }
+    }
   else
   {
       $error = 'Veuillez remplir tous les champs !';
