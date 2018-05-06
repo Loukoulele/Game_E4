@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once 'Database.php';
+require_once 'my_functions/login_access.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +33,7 @@ require_once 'Database.php';
 		<form class="form-group" action="index.php" method="POST">
 			<div class="input-group">
 				<div class="input-group-text"><i class="fa fa-user fa-lg" aria-hiden="true"></i></div>
-				<input class="form-control" type="username" name="username" placeholder="username"/>
+				<input class="form-control" type="pseudo" name="pseudo" placeholder="pseudo"/>
 		  	</div>
 		  	<div class="input-group">
 		  		<div class="input-group-text"><i class="fa fa-lock fa-lg" aria-hiden="true"></i></div>

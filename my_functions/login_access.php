@@ -1,21 +1,17 @@
 <?php
 
-
 if (isset($_POST) AND !empty($_POST))
 {
-  if (!empty(htmlspecialchars($_POST['username'])) AND !empty(htmlspecialchars($_POST['password'])))
+  if (!empty(htmlspecialchars($_POST['pseudo'])) AND !empty(htmlspecialchars($_POST['password'])))
   {
-    $req = $db->prepare('SELECT * FROM users WHERE username = :username AND password = :password');
-    $req->execute([
-      'username' => $_POST['username'],
-      'password' => $_POST['password']
-    ]);
+    $req = $db->prepare('SELECT pseudo, password FROM joueurs WHERE pseudo = ?');
+    $req->execute([ $_POST['pseudo']]);
 
-    $user = $req->fetchObject(); // exe ma req
+    $user = $req->fetch(); // exe ma req
 
-    if ($user)
+    if ($user['password'] == sha1($_POST['password']))
     {
-              $_SESSION['admin'] = $_POST['username'];
+              $_SESSION['pseudo'] = $_POST['pseudo'];
               header('location: loading.php');
     }
     else

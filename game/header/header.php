@@ -3,7 +3,7 @@
 session_start();
 require_once '../Database.php';
 
-if(!isset($_SESSION['admin']))
+if(!isset($_SESSION['pseudo']))
 {
   header('location:../index.php');
 }
