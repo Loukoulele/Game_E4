@@ -38,7 +38,7 @@ include 'side_menu/side_menu.php';
   </tr>
   <tr>
     <td>Quel est le jeu top 1 du moment ?</td>
-    <td><button type="button">League of Legends</button>  </td>
+    <td>League of Legends</td>
     <td>Mario Sunshine</td>
     <td>Fortnite</td>
     <td>Smite</td>

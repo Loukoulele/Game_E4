@@ -34,7 +34,6 @@ require 'Database.php';
 <body>
       <img src="<?php echo'../img/' . $joueurs['image']; ?>" class="rounded mx-auto d-block" alt="...">
        <p><?php echo ' ' . $joueurs['pseudo']; ?></p>
-       <p><?php echo ' ' . $joueurs['classe']; ?></p>
        <p><?php echo ' ' . $joueurs['niveau']; ?></p>
        <p><?php echo ' ' . $joueurs['experience']; ?></p>
 </body>

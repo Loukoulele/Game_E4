@@ -16,8 +16,6 @@ class Quizz
 
 
 
-
-
   public function check_quizz()
   {
 
