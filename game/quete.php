@@ -22,10 +22,27 @@
   <audio src="song/song1.mp3" autoplay loop></audio>
 
 </head>
-<body>
 <?php
 include 'header/header.php';
 include 'side_menu/side_menu.php';
  ?>
+<body>
  <img src="../img/zelda.gif" class="rounded mx-auto d-block">
+ <table style="width:100%">
+  <tr>
+    <th>Question</th>
+    <th>Réponse 1</th>
+    <th>Réponse 2</th>
+    <th>Réponse 3</th>
+    <th>Réponse 4</th>
+  </tr>
+  <tr>
+    <td>Quel est le jeu top 1 du moment ?</td>
+    <td><button type="button">League of Legends</button></td>
+    <td>Mario Sunshine</td>
+    <td>Fortnite</td>
+    <td>Smite</td>
+    <td>Valider</td>
+  </tr>
+</table>
 </body>

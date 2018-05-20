@@ -25,15 +25,16 @@ session_start();
   <audio src="song/song1.mp3" autoplay loop></audio>
 
 </head>
-<body>
 <?php
 include 'header/header.php';
 include 'side_menu/side_menu.php';
 include 'calldb.php';
+require 'Database.php';
  ?>
-      <img src="<?php echo'../img/' . $joueur['image']; ?>" class="rounded mx-auto d-block" alt="...">
-       <p><?php echo ' ' . $joueur['pseudo']; ?></p>
-       <p><?php echo ' ' . $joueur['classe']; ?></p>
-       <p><?php echo ' ' . $joueur['niveau']; ?></p>
-       <p><?php echo ' ' . $joueur['experience']; ?></p>
+<body>
+      <img src="<?php echo'../img/' . $joueurs['image']; ?>" class="rounded mx-auto d-block" alt="...">
+       <p><?php echo ' ' . $joueurs['pseudo']; ?></p>
+       <p><?php echo ' ' . $joueurs['classe']; ?></p>
+       <p><?php echo ' ' . $joueurs['niveau']; ?></p>
+       <p><?php echo ' ' . $joueurs['experience']; ?></p>
 </body>
