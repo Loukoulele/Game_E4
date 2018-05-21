@@ -1,13 +1,10 @@
 <?php
-  session_start();
-  ?>
-<?php
-  require 'Database.php'; // Différence entre require et include : require obligatoire sinon echec
+  require 'DatabaseGame.php'; // Différence entre require et include : require obligatoire sinon echec
 
-  $db = Database::connect();
+  $db = DatabaseGame::connect();
   $statement = $db->prepare('SELECT pseudo, niveau, experience, image
                           FROM joueurs');
   $joueurs = $statement->fetch();
-  Database::disconnect();
+  DatabaseGame::disconnect();
 
  ?>

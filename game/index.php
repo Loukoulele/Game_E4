@@ -1,6 +1,3 @@
-<?php
-session_start();
- ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +26,6 @@ session_start();
 include 'header/header.php';
 include 'side_menu/side_menu.php';
 include 'calldb.php';
-require 'Database.php';
  ?>
 <body>
       <img src="<?php echo'../img/' . $joueurs['image']; ?>" class="rounded mx-auto d-block" alt="...">

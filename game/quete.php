@@ -38,11 +38,11 @@ include 'side_menu/side_menu.php';
   </tr>
   <tr>
     <td>Quel est le jeu top 1 du moment ?</td>
-    <td>League of Legends</td>
-    <td>Mario Sunshine</td>
-    <td>Fortnite</td>
-    <td>Smite</td>
-    <td>Valider</td>
+    <td>League of Legends<input type="radio" name="quizz" value="id1"></td>
+    <td>Mario Sunshine<input type="radio" name="quizz" value="id1"></td>
+    <td>Fortnite<input type="radio" name="quizz" value="id1"></td>
+    <td>Smite<input type="radio" name="quizz" value="id1"></td>
+    <td><input type="submit" value="Valider"></td>
   </tr>
 </table>
 </body>

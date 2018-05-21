@@ -1,11 +1,11 @@
 <?php
 
-class Database
+class DatabaseGame
 {
   private static $dbHost = "localhost";
   private static $dbName = "gamee4";
   private static $dbUser = "root";
-  private static $dbUserPassword = "root";
+  private static $dbUserPassword = "";
 
   private static $connection = null;
 

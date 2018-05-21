@@ -1,6 +1,7 @@
 <?php
-
 session_start();
+?>
+<?php
 require_once '../Database.php';
 
 if(!isset($_SESSION['pseudo']))
