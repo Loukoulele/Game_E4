@@ -31,5 +31,5 @@ include 'calldb.php';
       <img src="<?php echo'../img/' . $joueurs['image']; ?>" class="rounded mx-auto d-block" alt="...">
        <p><?php echo ' ' . $joueurs['pseudo']; ?></p>
        <p><?php echo ' ' . $joueurs['niveau']; ?></p>
-       <p><?php echo ' ' . $joueurs['experience']; ?></p>
+       <p><?php echo ' ' . $joueurs['experience_joueurs']; ?></p>
 </body>

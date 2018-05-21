@@ -4,6 +4,7 @@ if (isset($_POST) AND !empty($_POST))
 {
   if (!empty(htmlspecialchars($_POST['pseudo'])) AND !empty(htmlspecialchars($_POST['password'])))
   {
+    $db = Database::connect();
     $req = $db->prepare('SELECT pseudo, password FROM joueurs WHERE pseudo = ?');
     $req->execute([ $_POST['pseudo']]);
 
@@ -13,6 +14,7 @@ if (isset($_POST) AND !empty($_POST))
     {
               $_SESSION['pseudo'] = $_POST['pseudo'];
               header('location: loading.php');
+              Database::disconnect();
     }
     else
     {

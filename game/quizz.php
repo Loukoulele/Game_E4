@@ -1,38 +1,28 @@
 <?php
-session_start();
 include 'calldb.php';
-require 'Database.php';
 
 class Quizz
 {
-  $experience = 0;
+  $exp_joueurs = $joueurs['experience_joueurs'];
+  $exp_quizz = $quizz['experience_quizz']
   $question = false;
 
-  function __construct($p_experience, $p_question)
+  function __construct($p_expJoueurs, $p_expQuizz, $p_question)
   {
-    $this->experience = $p_experience;
+    $this->exp_joueurs = $p_expJoueurs;
+    $this->exp_quizz = $p_expQuizz;
     $this->question = $p_question;
   }
 
-
-
   public function check_quizz()
   {
-
     if ($question == true)
     {
       echo "Bonne réponse";
-      return $joueurs['experience'] + $experience;
+      return $exp_joueurs = $exp_joueurs + $exp_quizz;
     }
-
   }
 }
-
-
-
-
-
-
 
 
  ?>

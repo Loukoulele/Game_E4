@@ -1,5 +1,7 @@
 <?php
 
+
+
 if (isset($_POST['forminscription']))
 {
   $pseudo = htmlspecialchars($_POST['pseudo']);
@@ -9,6 +11,7 @@ if (isset($_POST['forminscription']))
 
   if (!empty($_POST['pseudo']) AND !empty($_POST['password']) AND !empty(($_POST['password1'])))
   {
+    $db = Database::connect();
     $check_pseudo = $db->prepare("SELECT pseudo FROM joueurs WHERE pseudo = ?");
     $check_pseudo->execute(array($pseudo));
     if ($check_pseudo->rowCount() == 0)
@@ -17,6 +20,7 @@ if (isset($_POST['forminscription']))
       {
         $insertuser = $db->prepare("INSERT INTO joueurs (pseudo, password, image) values(?, ?, ?)");
         $insertuser->execute(array($pseudo, $password, $image));
+        Database::disconnect();
         header('Location: index.php');
       }
       else
