@@ -38,15 +38,15 @@
           </div>
             <div class="col-lg-4 col-sm-6">
               <img src="img/gon.jpg" height="225" width="225">
-              <input type="radio" name="image" value="gon.png" checked/><strong>Gon</strong><br>
+              <input type="radio" name="image" value="gon.jpg" checked/><strong>Gon</strong><br>
             </div>
             <div class="col-lg-4 col-sm-6">
               <img src="img/hisoka.jpg" height="225" width="225">
-              <input type="radio" name="image" value="hisoka.png" /><strong>Hisoka</strong><br>
+              <input type="radio" name="image" value="hisoka.jpg" /><strong>Hisoka</strong><br>
             </div>
             <div class="col-lg-4 col-sm-6">
              <img src="img/netero.jpg" height="225" width="225">
-             <input type="radio" name="image" value="netero.png" /><strong>Netero</strong><br>
+             <input type="radio" name="image" value="netero.jpg" /><strong>Netero</strong><br>
            </div>
             <div class="input-group">
           <div class="input-group-text"><i class="fa fa-user-circle fa-lg" aria-hiden="true"></i></div>

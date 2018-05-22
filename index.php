@@ -1,5 +1,7 @@
 <?php
 session_start();
+?>
+<?php
 require_once 'Database.php';
 require_once 'my_functions/login_access.php';
 ?>

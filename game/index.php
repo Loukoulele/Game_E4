@@ -1,6 +1,9 @@
 <?php
 session_start();
- ?>
+?>
+<?php
+include 'header/header.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,15 +29,12 @@ session_start();
 
 </head>
 <?php
-include 'header/header.php';
 include 'side_menu/side_menu.php';
 include 'calldb.php';
-require 'Database.php';
  ?>
 <body>
       <img src="<?php echo'../img/' . $joueurs['image']; ?>" class="rounded mx-auto d-block" alt="...">
        <p><?php echo ' ' . $joueurs['pseudo']; ?></p>
-       <p><?php echo ' ' . $joueurs['classe']; ?></p>
        <p><?php echo ' ' . $joueurs['niveau']; ?></p>
-       <p><?php echo ' ' . $joueurs['experience']; ?></p>
+       <p><?php echo ' ' . $joueurs['experience_joueurs']; ?></p>
 </body>
