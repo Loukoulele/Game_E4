@@ -56,9 +56,10 @@ session_start();
 include 'side_menu/side_menu.php';
  ?>
  <div class="card col-sm-10">
-   
+
    <div class="card-body">
      <button class="btn btn-primary center"><a href="quete.php">Quête</a></button>
+     Ju T'es un halmr
    </div>
  </div>
 
