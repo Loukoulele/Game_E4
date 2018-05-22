@@ -30,14 +30,25 @@
 		<img src="img/title.png" class="size">
     <img src="img/game.png" class="sizelogo">
 		<form class="form-group" action="signup.php" method="POST">
-      <h2>Créer son compte</h2>
-      <img src="img/gon.jpg">
-      <input type="radio" name="image" value="gon.png" checked/>Gon<br>
-      <img src="img/hisoka.jpg">
-       <input type="radio" name="image" value="hisoka.png" />Hisoka<br>
-       <img src="img/netero.jpg">
-       <input type="radio" name="image" value="netero.png" />Netero<br>
-        <div class="input-group">
+      <div class="container-fluid p-0">
+        <div class="row popup-gallery p-2">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Créer son compte</h2>
+            <hr class="light my-4">
+          </div>
+            <div class="col-lg-4 col-sm-6">
+              <img src="img/gon.jpg" height="225" width="225">
+              <input type="radio" name="image" value="gon.png" checked/><strong>Gon</strong><br>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <img src="img/hisoka.jpg" height="225" width="225">
+              <input type="radio" name="image" value="hisoka.png" /><strong>Hisoka</strong><br>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+             <img src="img/netero.jpg" height="225" width="225">
+             <input type="radio" name="image" value="netero.png" /><strong>Netero</strong><br>
+           </div>
+            <div class="input-group">
           <div class="input-group-text"><i class="fa fa-user-circle fa-lg" aria-hiden="true"></i></div>
           <input class="form-control" type="pseudo" name="pseudo" placeholder="pseudo"/>
           </div>

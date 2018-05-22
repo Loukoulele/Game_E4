@@ -6,6 +6,10 @@ h2{
   color: whitesmoke !important;
   margin-left: 3em;
 }
+input{
+  color: white !important;
+  font-size:2em !important;
+}
 .form-group{
     padding-top: 5%;
     padding-left: 30%;
