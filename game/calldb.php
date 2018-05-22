@@ -1,18 +1,18 @@
 <?php
-  require 'DatabaseGame.php'; // Différence entre require et include : require obligatoire sinon echec
+  require_once '../Database.php'; // Différence entre require et include : require obligatoire sinon echec
 
-  $db = DatabaseGame::connect();
+  $db = Database::connect();
   $statement = $db->prepare('SELECT pseudo, niveau, experience_joueurs, image
                           FROM joueurs WHERE pseudo = ?');
   $statement->execute(array($_SESSION['pseudo']));
   $joueurs = $statement->fetch();
-  DatabaseGame::disconnect();
+  Database::disconnect();
 
 
-  $db_t = DatabaseGame::connect();
+  $db_t = Database::connect();
   $statement_t = $db_t->prepare('SELECT *
                           FROM quizz');
   $exp_quizz = $statement_t->fetch();
-  DatabaseGame::disconnect();
+  Database::disconnect();
 
  ?>
