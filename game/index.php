@@ -1,9 +1,7 @@
 <?php
 session_start();
 ?>
-<?php
-include 'header/header.php';
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,13 +26,40 @@ include 'header/header.php';
   <audio src="song/song1.mp3" autoplay loop></audio>
 
 </head>
+<body>
+  <?php
+  include 'header/header.php';
+  include 'calldb.php';
+  ?>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand"><img src="<?php echo'../img/' . $joueurs['image']; ?>" class="rounded mx-auto d-block" alt="..." width="55" heigh="55"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link"><strong><?php echo ' ' . $joueurs['pseudo']; ?></p><span class="sr-only">(current)</span></strong></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Niveau : <?php echo ' ' . $joueurs['niveau']; ?></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Expérience : <?php echo ' ' . $joueurs['experience_joueurs']; ?></a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
 <?php
 include 'side_menu/side_menu.php';
-include 'calldb.php';
  ?>
-<body>
-      <img src="<?php echo'../img/' . $joueurs['image']; ?>" class="rounded mx-auto d-block" alt="...">
-       <p><?php echo ' ' . $joueurs['pseudo']; ?></p>
-       <p><?php echo ' ' . $joueurs['niveau']; ?></p>
-       <p><?php echo ' ' . $joueurs['experience_joueurs']; ?></p>
+ <div class="card col-sm-10">
+   <div class="card-body">
+     <button class="btn btn-primary center"><a href="quete.php">Quête</a></button>
+   </div>
+ </div>
+
+
 </body>

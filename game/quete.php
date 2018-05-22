@@ -27,25 +27,51 @@ session_start();
 </head>
 <?php
 include 'header/header.php';
-include 'side_menu/side_menu.php';
+include 'calldb.php'
+
  ?>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand"><img src="<?php echo'../img/' . $joueurs['image']; ?>" class="rounded mx-auto d-block" alt="..." width="55" heigh="55"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link"><strong><?php echo ' ' . $joueurs['pseudo']; ?></p><span class="sr-only">(current)</span></strong></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Niveau : <?php echo ' ' . $joueurs['niveau']; ?></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Expérience : <?php echo ' ' . $joueurs['experience_joueurs']; ?></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<?php include 'side_menu/side_menu.php'; ?>
+<div class="card col-sm-10">
  <img src="../img/zelda.gif" class="rounded mx-auto d-block">
- <table style="width:100%">
-  <tr>
-    <th>Question</th>
-    <th>Réponse 1</th>
-    <th>Réponse 2</th>
-    <th>Réponse 3</th>
-    <th>Réponse 4</th>
-  </tr>
-  <tr>
-    <td>Quel est le jeu top 1 du moment ?</td>
-    <td>League of Legends<input type="radio" name="quizz" value="id1"></td>
-    <td>Mario Sunshine<input type="radio" name="quizz" value="id1"></td>
-    <td>Fortnite<input type="radio" name="quizz" value="id1"></td>
-    <td>Smite<input type="radio" name="quizz" value="id1"></td>
-    <td><input type="submit" value="Valider"></td>
-  </tr>
-</table>
+ <h3 class="text-center">Question : </h3>
+  <h4 class="text-center">Quel est le jeu top 1 du moment ?</h4>
+</br/>
+ <table>
+    <tr>
+      <th><input type="radio" name="quizz" value="id1" checked> Réponse 1</th>
+      <th><input type="radio" name="quizz" value="id1"> Réponse 2</th>
+      <th><input type="radio" name="quizz" value="id1"> Réponse 3</th>
+      <th><input type="radio" name="quizz" value="id1"> Réponse 4</th>
+    </tr>
+    <tr>
+      <td>League of Legends</td>
+      <td>Mario Sunshine</td>
+      <td>Fortnite</td>
+      <td>Smite</td>
+      <td><input class="btn btn-primary" type="submit" value="Valider"></td>
+    </tr>
+  </table>
+  <hr/>
+  <br/>
+</card>
 </body>
