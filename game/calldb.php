@@ -3,7 +3,8 @@
 
   $db = DatabaseGame::connect();
   $statement = $db->prepare('SELECT pseudo, niveau, experience_joueurs, image
-                          FROM joueurs');
+                          FROM joueurs WHERE pseudo = ?');
+  $statement->execute(array($_SESSION['pseudo']));
   $joueurs = $statement->fetch();
   DatabaseGame::disconnect();
 

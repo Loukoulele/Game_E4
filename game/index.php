@@ -1,3 +1,9 @@
+<?php
+session_start();
+?>
+<?php
+include 'header/header.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +29,6 @@
 
 </head>
 <?php
-include 'header/header.php';
 include 'side_menu/side_menu.php';
 include 'calldb.php';
  ?>

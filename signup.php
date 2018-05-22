@@ -32,11 +32,11 @@
 		<form class="form-group" action="signup.php" method="POST">
       <h2>Créer son compte</h2>
       <img src="img/gon.jpg">
-      <input type="radio" name="image" value="gon.png" checked/>Gon<br>
+      <input type="radio" name="image" value="gon.jpg" checked/>Gon<br>
       <img src="img/hisoka.jpg">
-       <input type="radio" name="image" value="hisoka.png" />Hisoka<br>
+       <input type="radio" name="image" value="hisoka.jpg" />Hisoka<br>
        <img src="img/netero.jpg">
-       <input type="radio" name="image" value="netero.png" />Netero<br>
+       <input type="radio" name="image" value="netero.jpg" />Netero<br>
         <div class="input-group">
           <div class="input-group-text"><i class="fa fa-user-circle fa-lg" aria-hiden="true"></i></div>
           <input class="form-control" type="pseudo" name="pseudo" placeholder="pseudo"/>

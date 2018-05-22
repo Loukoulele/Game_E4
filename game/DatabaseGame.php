@@ -5,7 +5,7 @@ class DatabaseGame
   private static $dbHost = "localhost";
   private static $dbName = "gamee4";
   private static $dbUser = "root";
-  private static $dbUserPassword = "";
+  private static $dbUserPassword = "root";
 
   private static $connection = null;
 
