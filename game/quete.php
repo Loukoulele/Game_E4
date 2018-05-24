@@ -27,7 +27,8 @@ session_start();
 </head>
 <?php
 include 'header/header.php';
-include 'calldb.php'
+include 'calldb.php';
+include 'calldb_quizz.php';
 
  ?>
 <body>
@@ -54,7 +55,8 @@ include 'calldb.php'
 <div class="card col-sm-10">
  <img src="../img/zelda.gif" class="rounded mx-auto d-block">
  <h3 class="text-center">Question : </h3>
-  <h4 class="text-center">Quel est le jeu top 1 du moment ?</h4>
+  <h4 class="text-center"><?php //rand ( 0 , $quizz.length() - 1 )
+                                 ?></h4>
 </br/>
  <table>
     <tr>
