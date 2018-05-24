@@ -115,8 +115,8 @@ include 'side_menu/side_menu.php';
 <div class="d-flex justify-content-start">
 <div class="card col-sm-5">
   <div class="card-body">
-     <h3 style="font-size:3em"><stong>MEILLEURS JOUEURS</stong></h3>
-    <br/><br/>
+     <img src="../img/meilleur.png">
+     <br/><br/>
     <table class="table">
   <thead class="thead-dark">
     <tr>
