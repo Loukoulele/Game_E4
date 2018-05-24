@@ -1,5 +1,6 @@
 <?php
 include 'calldb.php';
+include 'calldb_quizz.php'
 
 class Quizz
 {
