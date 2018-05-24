@@ -35,6 +35,7 @@ if ($reponse_a_check == $bonne_rep)
 {
     echo "Bonne réponse";
     header("Location: quizz.php");
+    //yes
     //return $exp_joueurs = $exp_joueurs + $exp_quizz;
 }
 ?>
