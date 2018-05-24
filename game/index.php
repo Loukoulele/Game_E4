@@ -30,6 +30,21 @@ session_start();
   <?php
   include 'header/header.php';
   include 'calldb.php';
+
+  $lvl = 250;
+
+  if ($joueurs['niveau'] == 2)
+  {
+    $lvl = $lvl * 2;
+  }
+  if ($joueurs['niveau'] == 3)
+  {
+    $lvl = $lvl * 2;
+  }
+  if ($joueurs['niveau'] == 4)
+  {
+    $lvl = $lvl * 2;
+  }
   ?>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -46,7 +61,7 @@ session_start();
         <a class="nav-link">Niveau : <?php echo ' ' . $joueurs['niveau']; ?></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Expérience : <?php echo ' ' . $joueurs['experience_joueurs']; ?></a>
+        <a class="nav-link">Expérience : <?php echo ' ' . $joueurs['experience_joueurs']; ?> / <?php echo ' ' . $lvl; ?> </a>
       </li>
     </ul>
 
@@ -55,12 +70,86 @@ session_start();
 <?php
 include 'side_menu/side_menu.php';
  ?>
+ <a href="quete.php"><button class="btn btn-primary padright">Jouer au Quizz</button></a>
  <div class="card col-sm-10">
-
    <div class="card-body">
-     <button class="btn btn-primary center"><a href="quete.php">Quête</a></button>
+     <h3 class="center">Bienvenue sur World Of Quest</h3>
    </div>
  </div>
+ <br/></br>
+ <section class="bg-darkblue">
+  <div class="d-flex justify-content-start">
+   <div class="card col-sm-5">
+     <div class="card-body">
+       <h3 style="font-size:3em"><stong>JOUER GRATUITEMENT</stong></h3>
+       <br/><br/>
+        <h2>REPONDEZ JUSTE !</h2>
+          <br/>
+        <h2>GAGNE DE L'EXPERIENCE !</h2>
+          <br/>
+        <h3>MONTEZ EN NIVEAU !</h3>
+        <div class="d-flex justify-content-end">
+          <img class="leftico" src="../img/ico.png" width="200" height="200">
+      </div>
+    </div>
+  </div>
+    <div class="card marginleft col-sm-5">
+       <div class="card-body">
+        <img src="../img/lancer.png" width="500" height="100">
+        <br/><br/>
+        <h2><strong>COMMENT JOUER</strong> <i class="fa fa-question" aria-hidden="true"></i></h2>
+        <p><strong>Appuyez sur le boutton JOUER AU QUIZZ  pour accéder aux questions de culture générale.
+        <br/>Répondez aux questions et gagner de l'experience. Il n'y a que une seul bonne reponse par question.
+        <br/>TOUVEZ LA ET COCHER !</strong><p>
+          <br/>
+          <hr/>
+          <img src="../img/question.png" width="400" height="90">
+          <br/>
+           <a href="documents.php"><button class="btn btn-primary">en savoir plus</button></a>
+       </div>
+    </div>
+ </div>
+</section>
 
+<section class="bg-lightbleu">
+<div class="d-flex justify-content-start">
+<div class="card col-sm-5">
+  <div class="card-body">
+     <h3 style="font-size:3em"><stong>MEILLEURS JOUEURS</stong></h3>
+    <br/><br/>
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">PSEUDO</th>
+      <th scope="col">NIVEAU</th>
+      <th scope="col">EXPERIENCE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Loukoulele</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Julien</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+  <div class="card marginleft col-sm-5">
+     <div class="card-body">
+      <img class="mobilemargin" src="../img/mobile.png" width="795" height="200">
+      <br/><br/>
+      <h4>Une version mobile de World Of Quest est prévu pour <br/><br/><span class="center">SEPTEMBRE 2018 !</span></h4>
+  </div>
+</div>
+</section>
 
 </body>

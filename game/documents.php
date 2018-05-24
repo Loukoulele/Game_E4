@@ -28,22 +28,6 @@ session_start();
 <?php
 include 'header/header.php';
 include 'calldb.php';
-include 'calldb_quizz.php';
-
-$lvl = 250;
-
-if ($joueurs['niveau'] == 2)
-{
-  $lvl = $lvl * 2;
-}
-if ($joueurs['niveau'] == 3)
-{
-  $lvl = $lvl * 2;
-}
-if ($joueurs['niveau'] == 4)
-{
-  $lvl = $lvl * 2;
-}
  ?>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -60,37 +44,11 @@ if ($joueurs['niveau'] == 4)
         <a class="nav-link">Niveau : <?php echo ' ' . $joueurs['niveau']; ?></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Expérience : <?php echo ' ' . $joueurs['experience_joueurs']; ?> / <?php echo ' ' . $lvl; ?></a>
+        <a class="nav-link">Expérience : <?php echo ' ' . $joueurs['experience_joueurs']; ?></a>
       </li>
     </ul>
   </div>
 </nav>
 <?php include 'side_menu/side_menu.php'; ?>
-<div class="card col-sm-10">
- <img src="../img/zelda.gif" class="rounded mx-auto d-block">
- <h3 class="text-center">Question : </h3>
-  <h4 class="text-center"><?php //rand ( 0 , $quizz.length() - 1 )
-                                 echo ' ' . $quizz['question']; ?></h4>
-</br/>
- <table>
-   <form class="form" role="form" method="POST" action="quizz.php">
-    <tr>
-      <th><?php echo '<input type="radio" name="rep_form" value="' . $quizz['reponse'] . '" checked>';?> Réponse 1</th>
-      <th><?php echo '<input type="radio" name="rep_form" value="' . $quizz['reponse2_f'] . '">';?> Réponse 2</th>
-      <th><?php echo '<input type="radio" name="rep_form" value="' . $quizz['reponse3_f'] . '">';?> Réponse 3</th>
-      <th><?php echo '<input type="radio" name="rep_form" value="' . $quizz['reponse4_f'] . '">';?> Réponse 4</th>
-    </tr>
-    <tr>
-      <td><?php echo ' ' . $quizz['reponse']; ?></td>
-      <td><?php echo ' ' . $quizz['reponse2_f']; ?></td>
-      <td><?php echo ' ' . $quizz['reponse3_f']; ?></td>
-      <td><?php echo ' ' . $quizz['reponse4_f']; ?></td>
-      <td><input class="btn btn-primary" type="submit" value="Valider"></td>
-    </tr>
-    </form>
-  </table>
-
-  <hr/>
-  <br/>
-</card>
+<iframe class="col-md-10 card" src="documents.pdf" height="800" align="middle"></iframe>
 </body>
