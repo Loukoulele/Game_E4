@@ -7,17 +7,43 @@ background-color: whitesmoke;
   margin-left: 11em;
 }
 .card{
-  margin-top: 5em;
-  margin-left: 13em;
   margin-top: 2em;
+  margin-left: 13em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .center{
-  margin-left: 50%;
+  margin-left: 35%;
 }
 h3, h4{
   color :#007bff;
 }
-.btn{
-  margin-bottom: 1em;
+.padright{
+  margin-top: 2em;
+  margin-left: 55.3%;
+  padding: 0.5em 10em 0.5em 10em;
+  font-family: Montserrat, sans-serif;
+  letter-spacing: 4px;
+  font-size: 25px;
+}
+.point{
+  margin-left: 100%;
+  margin-bottom: 50%;
+}
+.sizeheader{
+  margin-left: 50%;
+  width: 50%;
+}
+.marginleft{
+  margin-left: 5em !important;
+}
+.mobilemargin{
+  margin: -1.4em 0em 0em -2.3em;
+}
+.bg-darkblue{
+  background-color: #0e1628;
+  padding-bottom: 5em;
+}
+.bg-lightbleu{
+  background-color: #4c7bb1;
+  padding-bottom: 15.2em;
 }
