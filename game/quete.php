@@ -30,6 +30,7 @@ include 'header/header.php';
 include 'calldb.php';
 include 'calldb_quizz.php';
 
+
  ?>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -56,23 +57,27 @@ include 'calldb_quizz.php';
  <img src="../img/zelda.gif" class="rounded mx-auto d-block">
  <h3 class="text-center">Question : </h3>
   <h4 class="text-center"><?php //rand ( 0 , $quizz.length() - 1 )
-                                 ?></h4>
+                                 echo ' ' . $quizz['question']; ?></h4>
 </br/>
+
  <table>
+   <form class="form" role="form" method="POST" action="quizz.php">
     <tr>
-      <th><input type="radio" name="quizz" value="id1" checked> Réponse 1</th>
-      <th><input type="radio" name="quizz" value="id1"> Réponse 2</th>
-      <th><input type="radio" name="quizz" value="id1"> Réponse 3</th>
-      <th><input type="radio" name="quizz" value="id1"> Réponse 4</th>
+      <th><input type="radio" name="rep_form" value="<?php $quizz['reponse'] ?>" checked> Réponse 1</th>
+      <th><input type="radio" name="rep_form" value="<?php $quizz['reponse2_f'] ?>"> Réponse 2</th>
+      <th><input type="radio" name="rep_form" value="<?php $quizz['reponse3_f'] ?>"> Réponse 3</th>
+      <th><input type="radio" name="rep_form" value="<?php $quizz['reponse4_f'] ?>"> Réponse 4</th>
     </tr>
     <tr>
-      <td>League of Legends</td>
-      <td>Mario Sunshine</td>
-      <td>Fortnite</td>
-      <td>Smite</td>
+      <td><?php echo ' ' . $quizz['reponse']; ?></td>
+      <td><?php echo ' ' . $quizz['reponse2_f']; ?></td>
+      <td><?php echo ' ' . $quizz['reponse3_f']; ?></td>
+      <td><?php echo ' ' . $quizz['reponse4_f']; ?></td>
       <td><input class="btn btn-primary" type="submit" value="Valider"></td>
     </tr>
+    </form>
   </table>
+
   <hr/>
   <br/>
 </card>
