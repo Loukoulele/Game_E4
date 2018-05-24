@@ -1,12 +1,13 @@
 <?php
 include 'calldb.php';
-include 'calldb_quizz.php'
+include 'calldb_quizz.php';
 
-class Quizz
+/*class Quizz
 {
+  $reponse_a_check = $_POST['rep_form'];
   $exp_joueurs = $joueurs['experience_joueurs'];
   $exp_quizz = $quizz['experience_quizz'];
-  $question = false;
+  $bonne_rep = $quizz['reponse'];
 
   function __construct($p_expJoueurs, $p_expQuizz, $p_question)
   {
@@ -17,11 +18,23 @@ class Quizz
 
   public function check_quizz()
   {
-    if ($question == true)
+    if ($reponse_a_check == $bonne_rep)
     {
-      echo "Bonne réponse";
-      return $exp_joueurs = $exp_joueurs + $exp_quizz;
+        echo "Bonne réponse";
+        //return $exp_joueurs = $exp_joueurs + $exp_quizz;
     }
   }
+}*/
+
+$reponse_a_check = $_POST['rep_form'];
+$exp_joueurs = $joueurs['experience_joueurs'];
+$exp_quizz = $quizz['experience_quizz'];
+$bonne_rep = $quizz['reponse'];
+
+if ($reponse_a_check == $bonne_rep)
+{
+    echo "Bonne réponse";
+    header("Location: quizz.php");
+    //return $exp_joueurs = $exp_joueurs + $exp_quizz;
 }
- ?>
+?>
