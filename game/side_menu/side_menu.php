@@ -11,7 +11,7 @@
             <a href="quete.php"><i class="fas fa-envelope"></i> Quête</a>
            </li>
            <li>
-             <a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Options</a>
+             <a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Formation</a>
            </li>
          </ul>
        </div>
