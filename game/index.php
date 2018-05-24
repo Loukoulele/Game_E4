@@ -30,6 +30,21 @@ session_start();
   <?php
   include 'header/header.php';
   include 'calldb.php';
+
+  $lvl = 250;
+
+  if ($joueurs['niveau'] == 2)
+  {
+    $lvl = $lvl * 2;
+  }
+  if ($joueurs['niveau'] == 3)
+  {
+    $lvl = $lvl * 2;
+  }
+  if ($joueurs['niveau'] == 4)
+  {
+    $lvl = $lvl * 2;
+  }
   ?>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -46,7 +61,7 @@ session_start();
         <a class="nav-link">Niveau : <?php echo ' ' . $joueurs['niveau']; ?></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Expérience : <?php echo ' ' . $joueurs['experience_joueurs']; ?></a>
+        <a class="nav-link">Expérience : <?php echo ' ' . $joueurs['experience_joueurs']; ?> / <?php echo ' ' . $lvl; ?> </a>
       </li>
     </ul>
 
