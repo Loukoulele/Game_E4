@@ -1,10 +1,11 @@
 <?php
 include 'calldb.php';
+include 'calldb_quizz.php'
 
 class Quizz
 {
   $exp_joueurs = $joueurs['experience_joueurs'];
-  $exp_quizz = $quizz['experience_quizz']
+  $exp_quizz = $quizz['experience_quizz'];
   $question = false;
 
   function __construct($p_expJoueurs, $p_expQuizz, $p_question)
@@ -23,6 +24,4 @@ class Quizz
     }
   }
 }
-
-
  ?>
