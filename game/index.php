@@ -85,7 +85,7 @@ include 'side_menu/side_menu.php';
        <br/><br/>
         <h2>REPONDEZ JUSTE !</h2>
           <br/>
-        <h2>GAGNE DE L'EXPERRIENCE !</h2>
+        <h2>GAGNE DE L'EXPERIENCE !</h2>
           <br/>
         <h3>MONTEZ EN NIVEAU !</h3>
         <div class="d-flex justify-content-end">
