@@ -33,31 +33,62 @@ $exp_quizz = $quizz['experience_quizz'];
 $bonne_rep = $quizz['reponse'];
 $lvl_joueurs = $joueurs['niveau'];
 
+if (!empty($_POST['rep_form']))
+{
+  $db_exp = Database::connect();
+  $statement_id = $db_exp->prepare('SELECT quizz_done FROM joueurs WHERE pseudo = ?');
+  $statement_id->execute(array($_SESSION['pseudo']));
+  $statement_id = $statement_id->fetch();
+  $quizz_done = $statement_id[0];
+  $quizz_id = $quizz_done . "," . strval($quizz['id']);
+
+  $statement_quest = $db_exp->prepare('UPDATE joueurs SET quizz_done = (?) WHERE pseudo = ?');
+  $statement_quest->execute(array($quizz_id, $_SESSION['pseudo']));
+
+
+  $statement_quizz = $db->query('SELECT id FROM quizz');
+
+  $test = array();
+
+  while($quizz_id2 = $statement_quizz->fetch())
+  {
+    $test[] = $quizz_id2['id'];
+  }
+  $tabs = explode(",", $quizz_id);
+
+
+  $diff = array_diff($test, $tabs);
+
+  $idKey = array_rand($diff);
+  $id_return = $diff[$idKey];
+  //var_dump($id_return);
+  //die;
+
+
+
+  $db_q = Database::connect();
+  $statement_q = $db_q->prepare('SELECT * FROM quizz WHERE id = ?');
+  $statement_q->execute(array($id_return));
+  $quizz_return = $statement_q->fetch();
+  Database::disconnect();
+
+  var_dump($quizz_return);
+  die;
+
+
+
+
+
 if ($reponse_a_check == $bonne_rep)
 {
     $exp_joueurs = $exp_joueurs + $exp_quizz;
-    $db_exp = Database::connect();
 
     $statement_exp = $db_exp->prepare('UPDATE joueurs SET experience_joueurs = (?) WHERE pseudo = ?');
     $statement_exp->execute(array($exp_joueurs, $_SESSION['pseudo']));
 
-    $statement_exp = $db_exp->prepare('SELECT quizz_done FROM joueurs WHERE pseudo = ?');
-    $statement_exp->execute(array($_SESSION['pseudo']));
-    $statement_exp = $statement_exp->fetch();
-    $quizz_done = $statement_exp[0];
-    $quizz_id = $quizz['id'];
-    (string)$quizz_done += (string)$quizz_id;
-
-    /*$quizz_push = split(",", $quizz_done);
-    $quizz_done += $quizz['id'];*/
-
-
-    $statement_quest = $db_exp->prepare('UPDATE joueurs SET quizz_done = (?) WHERE pseudo = ?');
-    $statement_quest->execute(array($quizz_done, $_SESSION['pseudo']));
-
     Database::disconnect();
 }
-
+}
 
 if ($lvl_joueurs == 1)
 {

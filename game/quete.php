@@ -38,11 +38,11 @@ if ($joueurs['niveau'] == 2)
 }
 if ($joueurs['niveau'] == 3)
 {
-  $lvl = $lvl * 2;
+  $lvl = $lvl * 2 * 2;
 }
 if ($joueurs['niveau'] == 4)
 {
-  $lvl = $lvl * 2;
+  $lvl = $lvl * 2 * 2 * 2;
 }
  ?>
 <body>
@@ -60,7 +60,7 @@ if ($joueurs['niveau'] == 4)
         <a class="nav-link">Niveau : <?php echo ' ' . $joueurs['niveau']; ?></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Expérience : <?php echo ' ' . $joueurs['experience_joueurs']; ?> / <?php echo ' ' . $lvl; ?></a>
+        <a class="nav-link">Expérience : <?php echo ' ' . $joueurs['experience_joueurs']; ?> /  <?php echo ' ' . $lvl; ?></a>
       </li>
     </ul>
   </div>
@@ -72,13 +72,16 @@ if ($joueurs['niveau'] == 4)
   <h4 class="text-center"><?php //rand ( 0 , $quizz.length() - 1 )
                                  echo ' ' . $quizz['question']; ?></h4>
 </br/>
+
+
+
  <table>
    <form class="form" role="form" method="POST" action="quizz.php">
     <tr>
-      <th><?php echo '<input type="radio" name="rep_form" value="' . $quizz['reponse'] . '" checked>';?> Réponse 1</th>
-      <th><?php echo '<input type="radio" name="rep_form" value="' . $quizz['reponse2_f'] . '">';?> Réponse 2</th>
-      <th><?php echo '<input type="radio" name="rep_form" value="' . $quizz['reponse3_f'] . '">';?> Réponse 3</th>
-      <th><?php echo '<input type="radio" name="rep_form" value="' . $quizz['reponse4_f'] . '">';?> Réponse 4</th>
+      <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse'] . '" checked> Réponse 1</th>'?>
+      <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse2_f'] . '"> Réponse 2</th>'?>
+      <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse3_f'] . '"> Réponse 3</th>'?>
+      <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse4_f'] . '"> Réponse 4</th>'?>
     </tr>
     <tr>
       <td><?php echo ' ' . $quizz['reponse']; ?></td>

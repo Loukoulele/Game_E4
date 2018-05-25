@@ -39,11 +39,11 @@ session_start();
   }
   if ($joueurs['niveau'] == 3)
   {
-    $lvl = $lvl * 2;
+    $lvl = $lvl * 2 * 2;
   }
   if ($joueurs['niveau'] == 4)
   {
-    $lvl = $lvl * 2;
+    $lvl = $lvl * 2 * 2 * 2;
   }
   ?>
 
