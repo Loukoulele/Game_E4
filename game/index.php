@@ -23,7 +23,7 @@ session_start();
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
   <link rel="icon" href="../img/game.png" />
-  <audio src="song/song1.mp3" autoplay loop></audio>
+  <!--<audio src="song/song1.mp3" autoplay loop></audio>-->
 
 </head>
 <body>

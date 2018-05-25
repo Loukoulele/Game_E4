@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,13 +23,14 @@ session_start();
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
   <link rel="icon" href="../img/game.png" />
-  <audio src="song/song1.mp3" autoplay loop></audio>
+  <!--<audio src="song/song1.mp3" autoplay loop></audio>-->
 
 </head>
 <?php
 include 'header/header.php';
 include 'calldb.php';
 include 'calldb_quizz.php';
+include 'tryhard.php';
 
 $lvl = 250;
 
@@ -66,19 +68,28 @@ if ($joueurs['niveau'] == 4)
   </div>
 </nav>
 <?php include 'side_menu/side_menu.php'; ?>
+
 <div class="card col-sm-10">
+  <?php
+    //$var_return = unserialize($_COOKIE['quizz_return']);
+
+   ?>
  <img src="../img/zelda.gif" class="rounded mx-auto d-block">
  <h3 class="text-center">Question : </h3>
   <h4 class="text-center"><?php //rand ( 0 , $quizz.length() - 1 )
-                                 echo ' ' . $quizz['question']; ?></h4>
+                                 echo ' ' . $quizz_return; ?></h4>
 </br/>
 
+<?php
 
+//$quizz_return = $_SESSION['question'];
+
+ ?>
 
  <table>
    <form class="form" role="form" method="POST" action="quizz.php">
     <tr>
-      <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse'] . '" checked> Réponse 1</th>'?>
+      <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse'] . '" checked> Réponse 1</th>';?>
       <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse2_f'] . '"> Réponse 2</th>'?>
       <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse3_f'] . '"> Réponse 3</th>'?>
       <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse4_f'] . '"> Réponse 4</th>'?>
