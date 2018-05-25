@@ -30,7 +30,6 @@ session_start();
 include 'header/header.php';
 include 'calldb.php';
 include 'calldb_quizz.php';
-include 'tryhard.php';
 
 $lvl = 250;
 
@@ -72,28 +71,25 @@ if ($joueurs['niveau'] == 4)
 <div class="card col-sm-10">
   <?php
     //$var_return = unserialize($_COOKIE['quizz_return']);
+    $quizz_return_question = $_SESSION['question'];
+    $quizz_return_reponse = $_SESSION['reponse'];
 
    ?>
  <img src="../img/zelda.gif" class="rounded mx-auto d-block">
  <h3 class="text-center">Question : </h3>
   <h4 class="text-center"><?php //rand ( 0 , $quizz.length() - 1 )
-                                 echo ' ' . $quizz_return; ?></h4>
+                                 echo ' ' . $quizz_return_question; ?></h4>
 </br/>
-
-<?php
-
-//$quizz_return = $_SESSION['question'];
-
- ?>
 
  <table>
    <form class="form" role="form" method="POST" action="quizz.php">
     <tr>
-      <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse'] . '" checked> Réponse 1</th>';?>
+      <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz_return_reponse . '" checked> Réponse 1</th>'?>
       <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse2_f'] . '"> Réponse 2</th>'?>
       <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse3_f'] . '"> Réponse 3</th>'?>
       <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse4_f'] . '"> Réponse 4</th>'?>
     </tr>
+
     <tr>
       <td><?php echo ' ' . $quizz['reponse']; ?></td>
       <td><?php echo ' ' . $quizz['reponse2_f']; ?></td>

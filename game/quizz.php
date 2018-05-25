@@ -69,8 +69,12 @@ if (!empty($_POST['rep_form']))
   $quizz_return = $statement_q->fetch();
   Database::disconnect();
 
-  $question = $quizz_return['question']
+  $question = $quizz_return['question'];
   $_SESSION['question'] = $question;
+
+  $reponse = $quizz_return['reponse'];
+  $_SESSION['reponse'] = $reponse;
+
   //$_SESSION['reponse'] = $quizz_return['reponse'];
   //var_dump($_SESSION['question']);
   //die;
