@@ -33,20 +33,19 @@
       <div class="container-fluid p-0">
         <div class="row popup-gallery p-2">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Créer son compte</h2>
-            <hr class="light my-4">
+            <h2 class="section-heading imgmargin my-4">Créer son compte</h2>
           </div>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-sm-6 imgmargin">
               <img src="img/gon.jpg" height="225" width="225">
-              <input type="radio" name="image" value="gon.jpg" checked/><strong>Gon</strong><br>
+              <input class="my-4" type="radio" name="image" value="gon.jpg" checked/> <strong style="color:white">Gon</strong><br>
             </div>
             <div class="col-lg-4 col-sm-6">
               <img src="img/hisoka.jpg" height="225" width="225">
-              <input type="radio" name="image" value="hisoka.jpg" /><strong>Hisoka</strong><br>
+              <input class="my-4" type="radio" name="image" value="hisoka.jpg" /> <strong style="color:white">Hisoka</strong><br>
             </div>
             <div class="col-lg-4 col-sm-6">
              <img src="img/netero.jpg" height="225" width="225">
-             <input type="radio" name="image" value="netero.jpg" /><strong>Netero</strong><br>
+             <input class="my-4" type="radio" name="image" value="netero.jpg" /> <strong style="color:white">Netero</strong><br>
            </div>
             <div class="input-group">
           <div class="input-group-text"><i class="fa fa-user-circle fa-lg" aria-hiden="true"></i></div>
@@ -63,5 +62,6 @@
 		  		<button class="btn btn-primary" type="submit" name="forminscription">Créer</button>
 		</form>
 	</div>
+  <a href="index.php">J'ai déjà un compte</a>
 </body>
 </html>
