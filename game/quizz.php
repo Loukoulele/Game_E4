@@ -75,6 +75,15 @@ if (!empty($_POST['rep_form']))
   $reponse = $quizz_return['reponse'];
   $_SESSION['reponse'] = $reponse;
 
+  $reponse2_f = $quizz_return['reponsetwo'];
+  $_SESSION['reponsetwo'] = $reponse2_f;
+
+  $reponse3_f = $quizz_return['reponsethree'];
+  $_SESSION['reponsethree'] = $reponse3_f;
+
+  var_dump($_SESSION['reponsetwo']);
+  die;
+
   //$_SESSION['reponse'] = $quizz_return['reponse'];
   //var_dump($_SESSION['question']);
   //die;

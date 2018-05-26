@@ -73,7 +73,9 @@ if ($joueurs['niveau'] == 4)
     //$var_return = unserialize($_COOKIE['quizz_return']);
     $quizz_return_question = $_SESSION['question'];
     $quizz_return_reponse = $_SESSION['reponse'];
-
+    $quizz_return_reponse2 = $_SESSION['reponsetwo'];
+    $quizz_return_reponse3 = $_SESSION['reponsethree'];
+    $quizz_return_reponse4 = $_SESSION['reponsefour'];
    ?>
  <img src="../img/zelda.gif" class="rounded mx-auto d-block">
  <h3 class="text-center">Question : </h3>
@@ -85,18 +87,23 @@ if ($joueurs['niveau'] == 4)
    <form class="form" role="form" method="POST" action="quizz.php">
     <tr>
       <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz_return_reponse . '" checked> Réponse 1</th>'?>
-      <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse2_f'] . '"> Réponse 2</th>'?>
-      <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse3_f'] . '"> Réponse 3</th>'?>
-      <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz['reponse4_f'] . '"> Réponse 4</th>'?>
+      <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz_return_reponse2 . '"> Réponse 2</th>'?>
+      <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz_return_reponse3 . '"> Réponse 3</th>'?>
+      <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz_return_reponse4 . '"> Réponse 4</th>'?>
     </tr>
 
     <tr>
-      <td><?php echo ' ' . $quizz['reponse']; ?></td>
-      <td><?php echo ' ' . $quizz['reponse2_f']; ?></td>
-      <td><?php echo ' ' . $quizz['reponse3_f']; ?></td>
-      <td><?php echo ' ' . $quizz['reponse4_f']; ?></td>
+      <td><?php echo ' ' . $quizz_return_reponse; ?></td>
+      <td><?php echo ' ' . $quizz_return_reponse2; ?></td>
+      <td><?php echo ' ' . $quizz_return_reponse3; ?></td>
+      <td><?php echo ' ' . $quizz_return_reponse4; ?></td>
       <td><input class="btn btn-primary" type="submit" value="Valider"></td>
     </tr>
+    <?php
+    var_dump($quizz_return_reponse2);
+    die;
+
+     ?>
     </form>
   </table>
 
