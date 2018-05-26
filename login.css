@@ -76,3 +76,6 @@ input{
 	color: #ff4d4d;
 	font-size: 1em;
 }
+.imgmargin{
+  margin-left: -10em;
+}
