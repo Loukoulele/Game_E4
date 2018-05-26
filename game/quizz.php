@@ -1,4 +1,5 @@
 <?php
+//session_start();
 include 'calldb.php';
 include 'calldb_quizz.php';
 
@@ -63,7 +64,7 @@ if (!empty($_POST['rep_form']))
   //var_dump($id_return);
   //die;
 
-  $db_q = Database::connect();
+  /*$db_q = Database::connect();
   $statement_q = $db_q->prepare('SELECT * FROM quizz WHERE id = ?');
   $statement_q->execute(array($id_return));
   $quizz_return = $statement_q->fetch();
@@ -81,8 +82,8 @@ if (!empty($_POST['rep_form']))
   $reponse3_f = $quizz_return['reponsethree'];
   $_SESSION['reponsethree'] = $reponse3_f;
 
-  var_dump($_SESSION['reponsetwo']);
-  die;
+  var_dump($_SESSION['reponse']);
+  die;*/
 
   //$_SESSION['reponse'] = $quizz_return['reponse'];
   //var_dump($_SESSION['question']);
