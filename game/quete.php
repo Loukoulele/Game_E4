@@ -5,6 +5,7 @@ session_start();
 include 'header/header.php';
 include 'calldb.php';
 include 'calldb_quizz.php';
+//include 'quizz.php';
 
  ?>
 
@@ -44,6 +45,8 @@ include 'calldb_quizz.php';
   $statement_q->execute(array($id_return));
   $quizz_return = $statement_q->fetch();
   Database::disconnect();
+
+
 
 
 
@@ -122,9 +125,14 @@ if ($joueurs['niveau'] == 4)
 </br/>
 
  <table>
-   <form class="form" role="form" method="POST" action="quete.php">
+   <form class="form" role="form" method="POST" action="quizz.php">
     <tr>
       <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz_return['reponse'] . '" checked> Réponse 1</th>'?>
+      <?php
+        $bonne_rep_return = $quizz_return['reponse'];
+        $_SESSION['bonne_rep'] = $bonne_rep_return;
+
+      ?>
       <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz_return['reponse2_f'] . '"> Réponse 2</th>'?>
       <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz_return['reponse3_f'] . '"> Réponse 3</th>'?>
       <?php echo '<th><input type="radio" name="rep_form" value="' . $quizz_return['reponse4_f'] . '"> Réponse 4</th>'?>

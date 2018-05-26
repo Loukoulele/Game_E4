@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 include 'calldb.php';
 include 'calldb_quizz.php';
 
@@ -30,7 +30,7 @@ include 'calldb_quizz.php';
 $reponse_a_check = $_POST['rep_form'];
 $exp_joueurs = $joueurs['experience_joueurs'];
 $exp_quizz = $quizz['experience_quizz'];
-$bonne_rep = $quizz['reponse'];
+//$bonne_rep = $quizz['reponse'];
 $lvl_joueurs = $joueurs['niveau'];
 
 if (!empty($_POST['rep_form']))
@@ -64,11 +64,11 @@ if (!empty($_POST['rep_form']))
   //var_dump($id_return);
   //die;
 
-  /*$db_q = Database::connect();
+  $db_q = Database::connect();
   $statement_q = $db_q->prepare('SELECT * FROM quizz WHERE id = ?');
   $statement_q->execute(array($id_return));
   $quizz_return = $statement_q->fetch();
-  Database::disconnect();
+  Database::disconnect();/*
 
   $question = $quizz_return['question'];
   $_SESSION['question'] = $question;
@@ -91,8 +91,9 @@ if (!empty($_POST['rep_form']))
 
   //setcookie("quizz_return",serialize($quizz_return),time()+999);
 
-  //var_dump($quizz_return);
+  //var_dump($repo);
   //die;
+$bonne_rep = $_SESSION['bonne_rep'];
 
 
 if ($reponse_a_check == $bonne_rep)
