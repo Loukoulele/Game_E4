@@ -96,16 +96,14 @@ include 'side_menu/side_menu.php';
     <div class="card marginleft col-sm-5">
        <div class="card-body">
         <img src="../img/lancer.png" width="500" height="100">
-        <br/><br/>
+        </div>
         <h2><strong>COMMENT JOUER</strong> <i class="fa fa-question" aria-hidden="true"></i></h2>
         <p><strong>Appuyez sur le boutton JOUER AU QUIZZ  pour accéder aux questions de culture générale.
         <br/>Répondez aux questions et gagner de l'experience. Il n'y a que une seul bonne reponse par question.
         <br/>TOUVEZ LA ET COCHER !</strong><p>
-          <br/>
           <hr/>
           <img src="../img/question.png" width="400" height="90">
-          <br/>
-           <a href="documents.php"><button class="btn btn-primary">en savoir plus</button></a>
+           <a href="documents.php"><button class="btn btn-primary my-4">en savoir plus</button></a>
        </div>
     </div>
  </div>
@@ -116,8 +114,7 @@ include 'side_menu/side_menu.php';
 <div class="card col-sm-5">
   <div class="card-body">
      <img src="../img/meilleur.png">
-     <br/><br/>
-    <table class="table">
+    <table class="table my-4">
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
