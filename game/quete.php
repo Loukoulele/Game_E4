@@ -47,6 +47,9 @@ include 'calldb_quizz.php';
   Database::disconnect();
 
 
+  $_SESSION['id'] = $quizz_return['id'];
+
+
 
 
 

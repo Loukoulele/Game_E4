@@ -32,15 +32,17 @@ $exp_joueurs = $joueurs['experience_joueurs'];
 $exp_quizz = $quizz['experience_quizz'];
 //$bonne_rep = $quizz['reponse'];
 $lvl_joueurs = $joueurs['niveau'];
+$_id = $_SESSION['id'];
 
 if (!empty($_POST['rep_form']))
 {
-  $db_exp = Database::connect();
+$db_exp = Database::connect();
   $statement_id = $db_exp->prepare('SELECT quizz_done FROM joueurs WHERE pseudo = ?');
   $statement_id->execute(array($_SESSION['pseudo']));
   $statement_id = $statement_id->fetch();
   $quizz_done = $statement_id[0];
-  $quizz_id = $quizz_done . "," . strval($quizz['id']);
+  //$quizz_id = $quizz_done . "," . strval($quizz['id']);
+  $quizz_id = $quizz_done . "," . strval($_id);
 
   $statement_quest = $db_exp->prepare('UPDATE joueurs SET quizz_done = (?) WHERE pseudo = ?');
   $statement_quest->execute(array($quizz_id, $_SESSION['pseudo']));
